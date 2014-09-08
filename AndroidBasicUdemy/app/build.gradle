@@ -5,7 +5,7 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "com.example.jdamian.myfirstapp"
+        applicationId "com.example.jdamian.androidbasicudemy"
         minSdkVersion 16
         targetSdkVersion 20
         versionCode 1
