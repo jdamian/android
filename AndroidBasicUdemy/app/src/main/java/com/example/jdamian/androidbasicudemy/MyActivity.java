@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -94,11 +95,10 @@ public class MyActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button:
-                    texto = editText.getText().toString();
-                Intent intent = new Intent(getBaseContext(),Segunda.class);
-                intent.putExtra("valor",texto);
-                startActivity(intent);
-                    tv2.setText(texto);
+                texto = editText.getText().toString();
+                tv2.setText(texto);
+
+                Toast.makeText(getApplicationContext(),"Esto es un mensaje en TOAST",Toast.LENGTH_SHORT).show();
 
                 if (ch1.isChecked()==true){
                     tv1.setText("Buenos dias Lady");
@@ -106,6 +106,13 @@ public class MyActivity extends Activity implements View.OnClickListener{
                 if (ch2.isChecked()==true){
                     tv1.setText("Buenos dias Joven");
                 }
+                break;
+            case R.id.bt_abrir:
+                texto = editText.getText().toString();
+                Intent intent = new Intent(getBaseContext(),Segunda.class);
+                intent.putExtra("valor",texto);
+                startActivity(intent);
+                break;
         }
     }
 }
